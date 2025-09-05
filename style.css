@@ -1,0 +1,9 @@
+body { font-family: Arial, sans-serif; }
+.module { border: 1px solid #ccc; padding: 10px; margin: 10px 0; }
+#canvas { border: 1px solid #000; }
+#three-container { width: 600px; height: 400px; }
+.hidden { display: none; }
+.warning { color: red; }
+.circle { opacity: 0.4; }
+.invalid { color: red; }
+.invalid input { border-color: red; }

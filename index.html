@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Distribución de Puntos</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Distribución de Puntos en Recinto</h1>
+
+  <div class="module" id="poly-module">
+    <h2>Recinto</h2>
+    <table id="vertex-table">
+      <thead>
+        <tr><th>Vértice</th><th>X</th><th>Y</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <button id="add-vertex">Agregar vértice</button>
+    <button id="remove-vertex">Quitar vértice</button>
+    <div>
+      <label>Altura: <input type="number" id="height" step="0.1" value="3"/></label>
+    </div>
+    <div>
+      <span>Superficie: <span id="surface">0</span></span>
+      <span>Volumen: <span id="volume">0</span></span>
+    </div>
+    <div>
+      <label><input type="checkbox" id="toggle3d"/> Visualización 3D</label>
+    </div>
+  </div>
+
+  <div class="module" id="draw-module">
+    <h2>Dibujo</h2>
+    <canvas id="canvas" width="600" height="400"></canvas>
+    <div id="three-container" class="hidden"></div>
+  </div>
+
+  <div class="module" id="points-module">
+    <h2>Puntos</h2>
+    <table id="points-table">
+      <thead>
+        <tr><th>Punto</th><th>X</th><th>Y</th><th>Z</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <button id="generate">Generar</button>
+    <button id="clear">Limpiar</button>
+    <div id="warning" class="warning hidden">No se pudo respetar todas las distancias.</div>
+  </div>
+
+  <div class="module" id="circles-module">
+    <h2>Círculos de Radio</h2>
+    <div>
+      <h3>Fuentes</h3>
+      <label><input type="checkbox" class="circle-toggle" data-group="red" value="0.5"/>0.5</label>
+      <label><input type="checkbox" class="circle-toggle" data-group="red" value="0.7"/>0.7</label>
+      <label><input type="checkbox" class="circle-toggle" data-group="red" value="1"/>1</label>
+      <label><input type="checkbox" class="circle-toggle" data-group="red" value="2"/>2</label>
+    </div>
+    <div>
+      <h3>Micros</h3>
+      <label><input type="checkbox" class="circle-toggle" data-group="blue" value="0.5"/>0.5</label>
+      <label><input type="checkbox" class="circle-toggle" data-group="blue" value="0.7"/>0.7</label>
+      <label><input type="checkbox" class="circle-toggle" data-group="blue" value="1"/>1</label>
+      <label><input type="checkbox" class="circle-toggle" data-group="blue" value="2"/>2</label>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/three@0.150.1/build/three.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
