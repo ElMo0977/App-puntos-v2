@@ -1,0 +1,8 @@
+{
+  "name": "app-puntos-v2",
+  "version": "1.0.0",
+  "description": "Aplicación interactiva para distribución de puntos en un recinto",
+  "scripts": {
+    "test": "echo 'No tests specified'"
+  }
+}
